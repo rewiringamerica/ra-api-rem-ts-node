@@ -11,15 +11,13 @@
  * Do not edit the class manually.
  */
 
-export class ValidationErrorLocInner {
 
-    static discriminator: string | undefined = undefined;
-
-    static attributeTypeMap: Array<{name: string, baseName: string, type: string}> = [
-    ];
-
-    static getAttributeTypeMap() {
-        return ValidationErrorLocInner.attributeTypeMap;
-    }
+/**
+* Heating fuels supported by the API.  Note that we do not currently support \"Other Fuel\" or \"None\".
+*/
+export enum HeatingFuelInput {
+    Electricity = <any> 'electricity',
+    FuelOil = <any> 'fuel_oil',
+    NaturalGas = <any> 'natural_gas',
+    Propane = <any> 'propane'
 }
-

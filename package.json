@@ -1,10 +1,10 @@
 {
-    "name": "@ra/rem",
-    "version": "0.1.8",
-    "description": "NodeJS client for rem",
+    "name": "@rewiringamerica/rem",
+    "version": "0.3.0",
+    "description": "NodeJS client for REM, the Residential Electrification Model.",
     "repository": {
         "type": "git",
-        "url": "https://github.com/GIT_USER_ID/GIT_REPO_ID.git"
+        "url": "https://github.com/rewiringamerica/ra-api-rem-ts-node.git"
     },
     "main": "dist/api.js",
     "types": "dist/api.d.ts",

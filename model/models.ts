@@ -2,15 +2,18 @@ import localVarRequest from 'request';
 
 export * from './buildingFeatures';
 export * from './buildingProfile';
-export * from './fuelData';
-export * from './fuelDataRates';
+export * from './fuelRate';
+export * from './fuelSavings';
 export * from './hTTPValidationError';
-export * from './heatingFuel';
-export * from './impact';
-export * from './metrics';
+export * from './heatingFuelInput';
+export * from './heatingFuelOutput';
+export * from './impactMetric';
+export * from './metricStatistics';
+export * from './quantity';
 export * from './remProfileRequest';
+export * from './resultFuelType';
 export * from './savings';
-export * from './validUpgrade';
+export * from './supportedUpgrade';
 export * from './validationError';
 export * from './validationErrorLocInner';
 
@@ -29,15 +32,18 @@ export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
 import { BuildingFeatures } from './buildingFeatures';
 import { BuildingProfile } from './buildingProfile';
-import { FuelData } from './fuelData';
-import { FuelDataRates } from './fuelDataRates';
+import { FuelRate } from './fuelRate';
+import { FuelSavings } from './fuelSavings';
 import { HTTPValidationError } from './hTTPValidationError';
-import { HeatingFuel } from './heatingFuel';
-import { Impact } from './impact';
-import { Metrics } from './metrics';
+import { HeatingFuelInput } from './heatingFuelInput';
+import { HeatingFuelOutput } from './heatingFuelOutput';
+import { ImpactMetric } from './impactMetric';
+import { MetricStatistics } from './metricStatistics';
+import { Quantity } from './quantity';
 import { RemProfileRequest } from './remProfileRequest';
+import { ResultFuelType } from './resultFuelType';
 import { Savings } from './savings';
-import { ValidUpgrade } from './validUpgrade';
+import { SupportedUpgrade } from './supportedUpgrade';
 import { ValidationError } from './validationError';
 import { ValidationErrorLocInner } from './validationErrorLocInner';
 
@@ -54,18 +60,21 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "HeatingFuel": HeatingFuel,
-        "ValidUpgrade": ValidUpgrade,
+        "HeatingFuelInput": HeatingFuelInput,
+        "HeatingFuelOutput": HeatingFuelOutput,
+        "ResultFuelType": ResultFuelType,
+        "SupportedUpgrade": SupportedUpgrade,
 }
 
 let typeMap: {[index: string]: any} = {
     "BuildingFeatures": BuildingFeatures,
     "BuildingProfile": BuildingProfile,
-    "FuelData": FuelData,
-    "FuelDataRates": FuelDataRates,
+    "FuelRate": FuelRate,
+    "FuelSavings": FuelSavings,
     "HTTPValidationError": HTTPValidationError,
-    "Impact": Impact,
-    "Metrics": Metrics,
+    "ImpactMetric": ImpactMetric,
+    "MetricStatistics": MetricStatistics,
+    "Quantity": Quantity,
     "RemProfileRequest": RemProfileRequest,
     "Savings": Savings,
     "ValidationError": ValidationError,
