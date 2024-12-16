@@ -59,7 +59,7 @@ rem_api.setDefaultAuthentication(key)
 // Get savings by address
 async function getRemByAddress(upgrade: SupportedUpgrade, address: string, heatingFuel: HeatingFuelInput) {
   try {
-    const response = await rem_api.remGetByAddress(upgrade, address, heatingFuel);
+    const response = await rem_api.getByAddress(upgrade, address, heatingFuel);
 
     console.log(response.body);
   } catch (error) {
