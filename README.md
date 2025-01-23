@@ -46,7 +46,7 @@ Please follow the [installation procedure](#installation--usage) and then run th
 
 import { ResidentialElectrificationModelApi } from "@rewiringamerica/rem/api/apis";
 import { SupportedUpgrade } from "@rewiringamerica/rem/model/supportedUpgrade";
-import { HeatingFuelInput } from "@rewiringamerica/rem/model/heatingFuelInput";
+import { HeatingFuel } from "@rewiringamerica/rem/model/heatingFuel";
 import { HttpBearerAuth } from "@rewiringamerica/rem/model/models";
 
 // Initialize the client and key
@@ -57,7 +57,7 @@ const rem_api = new ResidentialElectrificationModelApi();
 rem_api.setDefaultAuthentication(key)
 
 // Get savings by address
-async function getRemByAddress(upgrade: SupportedUpgrade, address: string, heatingFuel: HeatingFuelInput) {
+async function getRemByAddress(upgrade: SupportedUpgrade, address: string, heatingFuel: HeatingFuel) {
   try {
     const response = await rem_api.getByAddress(upgrade, address, heatingFuel);
 
@@ -69,7 +69,7 @@ async function getRemByAddress(upgrade: SupportedUpgrade, address: string, heati
 
 // Call the async function
 const address = "address_example"
-getRemByAddress(SupportedUpgrade.BasicEnclosure, address, HeatingFuelInput.NaturalGas);
+getRemByAddress(SupportedUpgrade.BasicEnclosure, address, HeatingFuel.NaturalGas);
 
 ```
 
