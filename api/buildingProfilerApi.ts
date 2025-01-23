@@ -15,7 +15,6 @@
 import localVarRequest from 'request';
 import http from 'http';
 
-/* tslint:disable:no-unused-locals */
 import { BuildingProfile } from '../model/buildingProfile';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';

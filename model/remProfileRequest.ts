@@ -12,7 +12,7 @@
  */
 
 import { BuildingProfile } from './buildingProfile';
-import { HeatingFuelInput } from './heatingFuelInput';
+import { HeatingFuel } from './heatingFuel';
 import { SupportedUpgrade } from './supportedUpgrade';
 
 /**
@@ -25,7 +25,7 @@ import { SupportedUpgrade } from './supportedUpgrade';
 */
 export class RemProfileRequest {
     'upgrade': SupportedUpgrade;
-    'heatingFuel': HeatingFuelInput;
+    'heatingFuel': HeatingFuel;
     'buildingProfile': BuildingProfile;
 
     static discriminator: string | undefined = undefined;
@@ -39,7 +39,7 @@ export class RemProfileRequest {
         {
             "name": "heatingFuel",
             "baseName": "heating_fuel",
-            "type": "HeatingFuelInput"
+            "type": "HeatingFuel"
         },
         {
             "name": "buildingProfile",

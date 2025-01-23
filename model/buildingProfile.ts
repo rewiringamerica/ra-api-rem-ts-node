@@ -31,7 +31,7 @@ export class BuildingProfile {
     'ashraeIeccClimateZone2004': string;
     'weatherFileCity': string;
     'state': string;
-    'buildingFeatures': BuildingFeatures;
+    'buildingFeatures'?: BuildingFeatures;
 
     static discriminator: string | undefined = undefined;
 

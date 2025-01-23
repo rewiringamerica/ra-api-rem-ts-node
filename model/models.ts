@@ -5,8 +5,7 @@ export * from './buildingProfile';
 export * from './fuelRate';
 export * from './fuelSavings';
 export * from './hTTPValidationError';
-export * from './heatingFuelInput';
-export * from './heatingFuelOutput';
+export * from './heatingFuel';
 export * from './impactMetric';
 export * from './metricStatistics';
 export * from './quantity';
@@ -35,8 +34,7 @@ import { BuildingProfile } from './buildingProfile';
 import { FuelRate } from './fuelRate';
 import { FuelSavings } from './fuelSavings';
 import { HTTPValidationError } from './hTTPValidationError';
-import { HeatingFuelInput } from './heatingFuelInput';
-import { HeatingFuelOutput } from './heatingFuelOutput';
+import { HeatingFuel } from './heatingFuel';
 import { ImpactMetric } from './impactMetric';
 import { MetricStatistics } from './metricStatistics';
 import { Quantity } from './quantity';
@@ -60,8 +58,7 @@ let primitives = [
                  ];
 
 let enumsMap: {[index: string]: any} = {
-        "HeatingFuelInput": HeatingFuelInput,
-        "HeatingFuelOutput": HeatingFuelOutput,
+        "HeatingFuel": HeatingFuel,
         "ResultFuelType": ResultFuelType,
         "SupportedUpgrade": SupportedUpgrade,
 }

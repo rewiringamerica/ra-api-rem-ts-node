@@ -15,8 +15,7 @@
 import localVarRequest from 'request';
 import http from 'http';
 
-/* tslint:disable:no-unused-locals */
-import { HeatingFuelInput } from '../model/heatingFuelInput';
+import { HeatingFuel } from '../model/heatingFuel';
 import { RemProfileRequest } from '../model/remProfileRequest';
 import { Savings } from '../model/savings';
 import { SupportedUpgrade } from '../model/supportedUpgrade';
@@ -143,7 +142,7 @@ export class ResidentialElectrificationModelApi {
      * @param address The address of the home being upgraded.
      * @param heatingFuel The heating fuel used in the home before the upgrade. Supported values are as follows: - &#x60;electricity&#x60;: the home was heated with electric heating, such as   baseboard heating, an electric boiler, or an electric furnace. - &#x60;natural_gas&#x60;: The home was heated with a natural gas furnace. - &#x60;fuel_oil&#x60;: The home was heated with a fuel oil boiler or furnace. - &#x60;propane&#x60;:  The home was heated with a propane furnace. 
      */
-    public async getByAddress (upgrade: SupportedUpgrade, address: string, heatingFuel: HeatingFuelInput, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Savings;  }> {
+    public async getByAddress (upgrade: SupportedUpgrade, address: string, heatingFuel: HeatingFuel, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: Savings;  }> {
         const localVarPath = this.basePath + '/api/v1/rem/address';
         let localVarQueryParameters: any = {};
         let localVarHeaderParams: any = (<any>Object).assign({}, this._defaultHeaders);
@@ -180,7 +179,7 @@ export class ResidentialElectrificationModelApi {
         }
 
         if (heatingFuel !== undefined) {
-            localVarQueryParameters['heating_fuel'] = ObjectSerializer.serialize(heatingFuel, "HeatingFuelInput");
+            localVarQueryParameters['heating_fuel'] = ObjectSerializer.serialize(heatingFuel, "HeatingFuel");
         }
 
         (<any>Object).assign(localVarHeaderParams, options.headers);
