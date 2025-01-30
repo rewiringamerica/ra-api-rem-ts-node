@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- * The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -15,7 +14,9 @@
 import localVarRequest from 'request';
 import http from 'http';
 
+
 import { BuildingProfile } from '../model/buildingProfile';
+import { HTTPValidationError } from '../model/hTTPValidationError';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
@@ -93,9 +94,7 @@ export class BuildingProfilerApi {
     }
 
     /**
-     * Geocode an address and match against ATTOM data to find building features for a given residence.
-     * This implementation takes in an address as a required query parameter and returns geographic characteristics
-     * and building features about the home if the input address is valid.
+     * Geocode an address and match against ATTOM data to find building features for a given residence.  This implementation takes in an address as a required query parameter and returns geographic characteristics and building features about the home if the input address is valid.  Parameters ----------     address: (str) The full address string for a location including street number and name, city, state,         and zip code.  Returns -------     BuildingProfile: JSON containing geographic information like county or state and building features like         square footage or vintage for the residence located at the given address.
      * @summary Get Home Profile
      * @param address The location of a home.
      */

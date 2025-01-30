@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- * The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -16,12 +15,7 @@ import { FuelSavings } from './fuelSavings';
 import { Quantity } from './quantity';
 
 /**
-* Represent the savings due to an upgrade.
-* Attributes
-* ----------
-* fuel_results: A list of results, one for each fuel type.
-* rates: A list of rates used to compute the cost of fuel consumed.
-* emissions_factors: A list of factors used to compute the the emissions from various fuels.
+* Represent the savings due to an upgrade.  Attributes ---------- fuel_results     A list of results, one for each fuel type. rates:     A list of rates used to compute the cost of fuel consumed. emissions_factors:     A list of factors used to compute the the emissions from various fuels.
 */
 export class Savings {
     'fuelResults': { [key: string]: FuelSavings; };

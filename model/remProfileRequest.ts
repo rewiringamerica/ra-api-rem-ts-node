@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- * The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -16,12 +15,7 @@ import { HeatingFuel } from './heatingFuel';
 import { SupportedUpgrade } from './supportedUpgrade';
 
 /**
-* A class representing the request body used to retrieve a building\'s profile.
-* Attributes
-* ----------
-* upgrade: Building Upgrade
-* heating_fuel: Heating Fuel
-* building_profile: Building Profile
+* A class representing the request body used to retrieve a building\'s profile.  Attributes ----------     upgrade: Building Upgrade     heating_fuel: Heating Fuel     building_profile: Building Profile
 */
 export class RemProfileRequest {
     'upgrade': SupportedUpgrade;

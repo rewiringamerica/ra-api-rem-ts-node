@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- *  The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -14,12 +13,7 @@
 import { MetricStatistics } from './metricStatistics';
 
 /**
-* Represents a collection of impacts associated with a fuel.
-* Attributes
-* ----------
-* energy: Energy statistics
-* emissions: Emissions statistics
-* cost: Cost statistics
+* Represents a collection of impacts associated with a fuel.  Attributes ---------- energy     Energy statistics emissions     Emissions statistics cost     Cost statistics
 */
 export class ImpactMetric {
     'energy': MetricStatistics;

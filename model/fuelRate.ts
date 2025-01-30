@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- * The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -11,11 +10,9 @@
  * Do not edit the class manually.
  */
 
+
 /**
-* Represents a rate.  It is a `Quantity` with the addition of a rate type.
-* Attributes
-* ----------
-* rate_type (str): The type of rate. Values can be \"fixed\" or \"volumetric\".
+* Represents a rate.  It is a `Quantity` with the addition of a rate type.  Attributes ----------     rate_type (str): The type of rate. Values can be \"fixed\" or \"volumetric\".
 */
 export class FuelRate {
     'value'?: number = 0.0;

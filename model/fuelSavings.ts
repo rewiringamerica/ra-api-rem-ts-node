@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- * The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -14,12 +13,7 @@
 import { ImpactMetric } from './impactMetric';
 
 /**
-* A class to represent savings data for a particular fuel.
-* Attributes
-* ----------
-* baseline (FuelMetrics): The data if no upgrade is passed into the surrogate model.
-* upgrade (FuelMetrics): The data if an upgrade is passed into the surrogate model.
-* delta (FuelMetrics): The deltas if an upgrade is passed into the surrogate model.
+* A class to represent savings data for a particular fuel.  Attributes ----------     baseline (FuelMetrics): The data if no upgrade is passed into the surrogate model.     upgrade (FuelMetrics): The data if an upgrade is passed into the surrogate model.     delta (FuelMetrics): The deltas if an upgrade is passed into the surrogate model.
 */
 export class FuelSavings {
     'baseline': ImpactMetric;

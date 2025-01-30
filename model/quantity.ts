@@ -1,7 +1,6 @@
 /**
  * Residential Electrification Model API
- * An API for REM, the Residential Electrification Model.
- * The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
+ * An API for REM, the Residential Electrification Model.         The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
  *
  * The version of the OpenAPI document: 0.1.0
  * Contact: datascience@rewiringamerica.org
@@ -11,12 +10,9 @@
  * Do not edit the class manually.
  */
 
+
 /**
-* A class to represent a quantity, which is a value with units.
-* Attributes
-* ----------
-* value (float): The numerical value.
-* units (str): The units.
+* A class to represent a quantity, which is a value with units.  Attributes ----------     value (float): The numerical value.     units (str): The units.
 */
 export class Quantity {
     'value'?: number = 0.0;
