@@ -16,7 +16,6 @@ import http from 'http';
 
 
 import { BuildingProfile } from '../model/buildingProfile';
-import { HTTPValidationError } from '../model/hTTPValidationError';
 
 import { ObjectSerializer, Authentication, VoidAuth, Interceptor } from '../model/models';
 import { HttpBearerAuth } from '../model/models';
@@ -94,8 +93,9 @@ export class BuildingProfilerApi {
     }
 
     /**
-     * Geocode an address and match against ATTOM data to find building features for a given residence.  This implementation takes in an address as a required query parameter and returns geographic characteristics and building features about the home if the input address is valid.  Parameters ---------- address     The full address string for a location including street number and name, city, state, and zip code. request     The raw incoming request object.  Returns ------- BuildingProfile     An object containing geographic information like county or state and building features like     square footage or vintage for the residence located at the given address.  Raises ------ HTTPException     If external APIs throw errors, the address is unparsable or missing information, or the address is outside of     the contiguous US.
-     * @summary Get home profile
+     * Geocode an address and match against ATTOM data to find building features for a given residence.  This implementation takes in an address
+     * as a required query parameter and returns geographic characteristics and building features about the home if the input address is valid.
+     * * @summary Get home profile
      * @param address The full address for a location including street number and name, city, state, and zip code.
      */
     public async getHomeProfile (address: string, options: {headers: {[name: string]: string}} = {headers: {}}) : Promise<{ response: http.IncomingMessage; body: BuildingProfile;  }> {
