@@ -37,7 +37,8 @@ export class BuildingProfile {
     */
     'state': string;
     /**
-    * The building characteristics found for the residence. See BuildingFeatures documentation for full details about possible characteristics and their meanings.
+    * The building characteristics found for the residence.
+    * See BuildingFeatures documentation for full details about possible characteristics and their meanings.
     */
     'buildingFeatures'?: BuildingFeatures;
 

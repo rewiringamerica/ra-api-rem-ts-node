@@ -13,7 +13,8 @@
 import { Quantity } from './quantity';
 
 /**
-* Represents a statistic associated with a particular fuel and type of impact.  These statistics are computed are over the set of sample homes in the Monte Carlo simulation.
+* Represents a statistic associated with a particular fuel and type of impact.
+* These statistics are computed are over the set of sample homes in the Monte Carlo simulation.
 */
 export class MetricStatistics {
     /**

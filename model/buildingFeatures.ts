@@ -12,7 +12,11 @@
 
 
 /**
-* A class representing the set of possible building characteristics.  All values default to None, indicating that the given characteristic is unknown for the represented residence. If a characteristic has the string value of \"None\" it indicates that the characteristic, like Air Conditioning or a Pool, is not present at the represented residence.
+* A class representing the set of possible building characteristics.
+* All values default to None, indicating that the given characteristic is unknown for the
+* represented residence. If a characteristic has the string value of \"None\" it indicates
+* that the characteristic, like Air Conditioning or a Pool, is not present at the represented
+* residence.
 */
 export class BuildingFeatures {
     /**
