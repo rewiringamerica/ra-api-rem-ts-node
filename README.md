@@ -1,6 +1,5 @@
 # @rewiringamerica/rem
 An API for REM, the Residential Electrification Model.
-        The other Rewiring America APIs and methodology for REM are [here](https://api.rewiringamerica.org/).
 
 Rewiring America's other APIs can be found [at our main API site](https://api.rewiringamerica.org/).
 
