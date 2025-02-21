@@ -1,0 +1,40 @@
+# Publish Typescript stubs to npm.
+
+name: Publish stubs
+
+# Prod deployments will automatically generate code into the repo
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  id-token: write
+
+jobs:
+  #----------------------------------------------
+  #               Publish stubs
+  #----------------------------------------------
+  publish-stubs:
+    runs-on: ubuntu-latest
+    steps:
+        - name: Checkout repo
+          uses: actions/checkout@v4
+
+        - name: Set up npm
+          uses: actions/setup-node@v4
+          with:
+            node-version: 18
+            registry-url: "https://registry.npmjs.org"
+
+        - name: Build the package
+          run: |
+            npm install
+            npm run build
+
+        - name: Publish the package
+          env:
+              NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          run: |
+            npm login
+            npm publish --access public

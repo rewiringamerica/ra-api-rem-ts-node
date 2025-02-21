@@ -16,6 +16,7 @@
     "author": "Rewiring America",
     "license": "Apache-2.0",
     "dependencies": {
+        "@rewiringamerica/rem": "^0.4.6",
         "bluebird": "^3.7.2",
         "request": "^2.88.2"
     },
