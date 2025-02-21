@@ -4,7 +4,9 @@ name: Publish stubs
 
 # Prod deployments will automatically generate code into the repo
 on:
-  push
+  push:
+    branches:
+      - main
 
 permissions:
   id-token: write
