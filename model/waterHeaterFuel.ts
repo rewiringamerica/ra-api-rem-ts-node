@@ -10,16 +10,13 @@
  * the class manually.
  */
 
-export class ValidationErrorLocInner {
-  static discriminator: string | undefined = undefined;
-
-  static attributeTypeMap: Array<{
-    name: string;
-    baseName: string;
-    type: string;
-  }> = [];
-
-  static getAttributeTypeMap() {
-    return ValidationErrorLocInner.attributeTypeMap;
-  }
+/**
+ * Water heater fuel options. Note that we do not currently support "Other
+ * Fuel".
+ */
+export enum WaterHeaterFuel {
+  Electricity = <any>"electricity",
+  FuelOil = <any>"fuel_oil",
+  NaturalGas = <any>"natural_gas",
+  Propane = <any>"propane",
 }

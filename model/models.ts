@@ -1,5 +1,6 @@
 import localVarRequest from "request";
 
+export * from "./addressComponentRequest";
 export * from "./buildingFeatures";
 export * from "./buildingProfile";
 export * from "./fuelRate";
@@ -11,10 +12,12 @@ export * from "./metricStatistics";
 export * from "./quantity";
 export * from "./remProfileRequest";
 export * from "./resultFuelType";
+export * from "./samplingDetails";
 export * from "./savings";
 export * from "./supportedUpgrade";
 export * from "./validationError";
 export * from "./validationErrorLocInner";
+export * from "./waterHeaterFuel";
 
 import * as fs from "fs";
 
@@ -28,6 +31,7 @@ export interface RequestDetailedFile {
 
 export type RequestFile = string | Buffer | fs.ReadStream | RequestDetailedFile;
 
+import { AddressComponentRequest } from "./addressComponentRequest";
 import { BuildingFeatures } from "./buildingFeatures";
 import { BuildingProfile } from "./buildingProfile";
 import { FuelRate } from "./fuelRate";
@@ -39,10 +43,12 @@ import { MetricStatistics } from "./metricStatistics";
 import { Quantity } from "./quantity";
 import { RemProfileRequest } from "./remProfileRequest";
 import { ResultFuelType } from "./resultFuelType";
+import { SamplingDetails } from "./samplingDetails";
 import { Savings } from "./savings";
 import { SupportedUpgrade } from "./supportedUpgrade";
 import { ValidationError } from "./validationError";
 import { ValidationErrorLocInner } from "./validationErrorLocInner";
+import { WaterHeaterFuel } from "./waterHeaterFuel";
 
 /* tslint:disable:no-unused-variable */
 let primitives = [
@@ -60,9 +66,11 @@ let enumsMap: { [index: string]: any } = {
   HeatingFuel: HeatingFuel,
   ResultFuelType: ResultFuelType,
   SupportedUpgrade: SupportedUpgrade,
+  WaterHeaterFuel: WaterHeaterFuel,
 };
 
 let typeMap: { [index: string]: any } = {
+  AddressComponentRequest: AddressComponentRequest,
   BuildingFeatures: BuildingFeatures,
   BuildingProfile: BuildingProfile,
   FuelRate: FuelRate,
@@ -72,6 +80,7 @@ let typeMap: { [index: string]: any } = {
   MetricStatistics: MetricStatistics,
   Quantity: Quantity,
   RemProfileRequest: RemProfileRequest,
+  SamplingDetails: SamplingDetails,
   Savings: Savings,
   ValidationError: ValidationError,
   ValidationErrorLocInner: ValidationErrorLocInner,

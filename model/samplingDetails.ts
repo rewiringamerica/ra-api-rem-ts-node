@@ -10,14 +10,16 @@
  * the class manually.
  */
 
-/** Represents a `Quantity` with the addition of a rate type. */
-export class FuelRate {
-  /** The numerical value. */
-  "value"?: number = 0.0;
-  /** The unit. */
-  "unit": string;
-  /** The type of rate. Values can be 'fixed' or 'volumetric'. */
-  "rateType"?: string = "volumetric";
+/** Details on the samples used in the model. */
+export class SamplingDetails {
+  /** The number of samples used to compute the statistics. */
+  "numSamples": number;
+  /**
+   * The number of samples that matched the building profile but for which the
+   * chosen upgradewas not applicable, and were therefore excluded when
+   * computing the statistics.
+   */
+  "numExcludedSamples": number;
 
   static discriminator: string | undefined = undefined;
 
@@ -27,23 +29,18 @@ export class FuelRate {
     type: string;
   }> = [
     {
-      name: "value",
-      baseName: "value",
+      name: "numSamples",
+      baseName: "num_samples",
       type: "number",
     },
     {
-      name: "unit",
-      baseName: "unit",
-      type: "string",
-    },
-    {
-      name: "rateType",
-      baseName: "rate_type",
-      type: "string",
+      name: "numExcludedSamples",
+      baseName: "num_excluded_samples",
+      type: "number",
     },
   ];
 
   static getAttributeTypeMap() {
-    return FuelRate.attributeTypeMap;
+    return SamplingDetails.attributeTypeMap;
   }
 }

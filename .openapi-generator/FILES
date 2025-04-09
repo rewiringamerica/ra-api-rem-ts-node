@@ -4,6 +4,7 @@ api/apis.ts
 api/buildingProfilerApi.ts
 api/residentialElectrificationModelApi.ts
 git_push.sh
+model/addressComponentRequest.ts
 model/buildingFeatures.ts
 model/buildingProfile.ts
 model/fuelRate.ts
@@ -16,9 +17,11 @@ model/models.ts
 model/quantity.ts
 model/remProfileRequest.ts
 model/resultFuelType.ts
+model/samplingDetails.ts
 model/savings.ts
 model/supportedUpgrade.ts
 model/validationError.ts
 model/validationErrorLocInner.ts
+model/waterHeaterFuel.ts
 package.json
 tsconfig.json
