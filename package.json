@@ -1,6 +1,6 @@
 {
     "name": "@rewiringamerica/rem",
-    "version": "1.3.0",
+    "version": "1.3.2",
     "description": "NodeJS client for @rewiringamerica/rem",
     "repository": {
         "type": "git",
